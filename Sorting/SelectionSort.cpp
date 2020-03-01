@@ -1,4 +1,4 @@
-// C++ program to implement Selection sort 
+// C++ program to implement selection sort 
 #include <iostream>
 using namespace std; 
   
@@ -13,7 +13,8 @@ void SelectSort(int *a, int n)
 				minIndex = j;
 			}
 		}
-		swap(a[i], a[minIndex]);
+		if(minIndex != i) 
+			swap(a[i], a[minIndex]);
 	}
 } 
 
