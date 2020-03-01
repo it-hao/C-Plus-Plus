@@ -1,2 +1,5 @@
-# C-Plus-Plus
-The implementation of some important algorithm using c++...
+# The Algorithms C++
+The implementation of some important algorithm using c++
+
+In progress...
+
