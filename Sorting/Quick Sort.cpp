@@ -1,7 +1,7 @@
 /*  C++ implementation QuickSort */
 #include <iostream>
 using namespace std;
-
+// 这种是还可以通过“荷兰国旗问题”进行优化 
 int partition(int *a, int low, int high)
 {
 	int i, j;
@@ -24,7 +24,7 @@ int partition(int *a, int low, int high)
 	swap(a[i], a[high]);
 	return i;
 }
-
+// 这种是经常使用的 
 //int partition(int *a, int low, int high)
 //{
 //	int pivot = a[low];
