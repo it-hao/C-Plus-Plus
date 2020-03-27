@@ -6,13 +6,12 @@ void insertSort(int *a, int n)
 {
 	for(int i = 1; i < n; i ++)
 	{
-		int temp = a[i]; 
-		int j = i - 1;
+		int temp = std::move(a[i]);
+		int j = i;
+		for( ; j > 0 && a[j - 1] > temp ; j --)
+			a[j] = std::move(a[j - 1]);
 		
-		for(; j >= 0 && temp < a[j]; j --)	
-			a[j + 1] = a[j];
-		
-		a[j + 1] = temp;
+		a[j] = std::move(temp);
 	}
 } 
 
