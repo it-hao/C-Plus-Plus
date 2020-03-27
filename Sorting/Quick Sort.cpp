@@ -1,15 +1,15 @@
 /*  C++ implementation Quick Sort */
 #include <iostream>
 using namespace std;
-// è¿™ç§æ˜¯è¿˜å¯ä»¥é€šè¿‡â€œè·å…°å›½æ——é—®é¢˜â€è¿›è¡Œä¼˜åŒ–  
+// ÕâÖÖÊÇ»¹¿ÉÒÔÍ¨¹ý¡°ºÉÀ¼¹úÆìÎÊÌâ¡±½øÐÐÓÅ»¯  
 int partition(int *a, int low, int high)
 {
 	int i, j;
 	i = j = low;
 	int pivot = a[high];
-	// é€šè¿‡æ¸¸æ ‡iè¿›è€Œå°†a[low, high-1]åˆ†æˆä¸¤éƒ¨åˆ†ï¼Œä¸€éƒ¨åˆ†æ˜¯å·²ç»å¤„ç†çš„ï¼Œéƒ½å°äºŽ pivot çš„, å³ï¼ša[low, i-1]
-	// å¦ä¸€éƒ¨åˆ†æ˜¯å¤„æœªç†çš„ï¼Œå³ï¼ša[i, high-1]	æˆ‘ä»¬æ¯æ¬¡éƒ½ä»Žæœªå¤„ç†çš„åŒºåŸŸå–å‡ºä¸€ä¸ªåŽ»å’Œ pivot æ¯”è¾ƒï¼Œ å¦‚æžœå°
-	// äºŽçš„è¯ï¼Œå°±å°†å…¶æ”¾åˆ°å¤„ç†åŒºåŸŸçš„å°¾éƒ¨ï¼Œæœ€åŽ i å°±æ˜¯é‚£ä¸ªåˆ†ç•Œç‚¹ã€‚ 
+	// Í¨¹ýÓÎ±êi½ø¶ø½«a[low, high-1]·Ö³ÉÁ½²¿·Ö£¬Ò»²¿·ÖÊÇÒÑ¾­´¦ÀíµÄ£¬¶¼Ð¡ÓÚ pivot µÄ, ¼´£ºa[low, i-1]
+	// ÁíÒ»²¿·ÖÊÇ´¦Î´ÀíµÄ£¬¼´£ºa[i, high-1]	ÎÒÃÇÃ¿´Î¶¼´ÓÎ´´¦ÀíµÄÇøÓòÈ¡³öÒ»¸öÈ¥ºÍ pivot ±È½Ï£¬ Èç¹ûÐ¡
+	// ÓÚµÄ»°£¬¾Í½«Æä·Åµ½´¦ÀíÇøÓòµÄÎ²²¿£¬×îºó i ¾ÍÊÇÄÇ¸ö·Ö½çµã¡£ 
 	for(; j < high; j ++)
 	{
 		if(a[j] < pivot)
@@ -24,7 +24,7 @@ int partition(int *a, int low, int high)
 	swap(a[i], a[high]);
 	return i;
 }
-// è¿™ç§æ˜¯ç»å¸¸ä½¿ç”¨çš„ 
+// ÕâÖÖÊÇ¾­³£Ê¹ÓÃµÄ 
 //int partition(int *a, int low, int high)
 //{
 //	int pivot = a[low];
