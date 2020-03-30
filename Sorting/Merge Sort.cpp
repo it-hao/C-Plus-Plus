@@ -1,11 +1,15 @@
-/*  C++ implementation MergeSort */
+/*  
+	C++ implementation MergeSort 
+	采用的是递归的形式 
+*/
+ 
 #include <iostream>
 using namespace std;
 
 void merge(int arr[], int l, int m, int r)
 {
 	int n = r - l + 1;
-	int *tmp = new int[n];
+	int tmp[n];
 	int i, j, k;
 	for(i = l, j = m + 1, k = 0; i <= m && j <= r;)
 	{
@@ -26,8 +30,6 @@ void merge(int arr[], int l, int m, int r)
 	
 	for(i = l; i < n + l; i++)
 		arr[i] = tmp[i - l];
-		
-	delete tmp;
 }
 
 //void merge(int arr[], int l, int m, int r)
