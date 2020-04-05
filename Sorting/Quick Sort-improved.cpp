@@ -27,7 +27,7 @@ int median3(int *a, int low, int high){
 		std::swap(a[mid], a[high]);
 	}
 	std::swap(a[mid], a[high-1]);  //注意将pivot的值至于 a[high-1]中，确保数字是 a[low] < a[mid] (a[high-1]) < a[high] 
-	return a[high-1];  // 返回的数字需要注意 
+	return a[high-1];  // 将pivot放置于 high - 1 的位置  
 }
 // 快速排序 
 void quickSort(int *a, int low, int high)
@@ -72,9 +72,9 @@ void quickSelect(int *a, int low, int high, int k)
 		std::swap(a[i], a[high - 1]);
 		// 这里相当于 (k-1)<i   (k-1)>i   ===>也就是 k < i + 1  k > i + 1 
         if(k <= i){
-            quickSort(a, low, i - 1);
+            quickSelect(a, low, i - 1, k);
         }else if(k > i + 1){
-            quickSort(a, i + 1, high);
+            quickSelect(a, i + 1, high, k);
         }
 	}else{
 		insertSort(a, low, high);
